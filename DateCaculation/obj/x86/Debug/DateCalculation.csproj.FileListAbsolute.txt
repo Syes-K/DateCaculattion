@@ -1,0 +1,14 @@
+D:\Projects\DateCaculation\DateCalculation\bin\Debug\DateCalculation.exe
+D:\Projects\DateCaculation\DateCalculation\bin\Debug\DateCalculation.pdb
+D:\Projects\DateCaculation\DateCalculation\obj\x86\Debug\DateCalculation.Form1.resources
+D:\Projects\DateCaculation\DateCalculation\obj\x86\Debug\DateCalculation.Properties.Resources.resources
+D:\Projects\DateCaculation\DateCalculation\obj\x86\Debug\DateCalculation.csproj.GenerateResource.Cache
+D:\Projects\DateCaculation\DateCalculation\obj\x86\Debug\DateCalculation.exe
+D:\Projects\DateCaculation\DateCalculation\obj\x86\Debug\DateCalculation.pdb
+D:\githubProject\DateCaculattion\DateCaculation\obj\x86\Debug\DateCalculation.exe
+D:\githubProject\DateCaculattion\DateCaculation\obj\x86\Debug\DateCalculation.pdb
+D:\githubProject\DateCaculattion\DateCaculation\bin\Debug\DateCalculation.exe
+D:\githubProject\DateCaculattion\DateCaculation\bin\Debug\DateCalculation.pdb
+D:\githubProject\DateCaculattion\DateCaculation\obj\x86\Debug\DateCalculation.Form1.resources
+D:\githubProject\DateCaculattion\DateCaculation\obj\x86\Debug\DateCalculation.Properties.Resources.resources
+D:\githubProject\DateCaculattion\DateCaculation\obj\x86\Debug\DateCalculation.csproj.GenerateResource.Cache
