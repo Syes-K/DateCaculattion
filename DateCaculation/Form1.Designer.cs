@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dtpGrantStartDate = new System.Windows.Forms.DateTimePicker();
             this.gbGrantRemandDate = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -89,6 +90,22 @@
             this.dtpsended2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtppublic2 = new System.Windows.Forms.DateTimePicker();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
+            this.gbAddedDate = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btncaculate = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.gbGrantRemandDate.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -118,6 +135,13 @@
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.gbAddedDate.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtpGrantStartDate
@@ -139,7 +163,7 @@
             this.gbGrantRemandDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbGrantRemandDate.Location = new System.Drawing.Point(3, 60);
             this.gbGrantRemandDate.Name = "gbGrantRemandDate";
-            this.gbGrantRemandDate.Size = new System.Drawing.Size(348, 271);
+            this.gbGrantRemandDate.Size = new System.Drawing.Size(348, 259);
             this.gbGrantRemandDate.TabIndex = 3;
             this.gbGrantRemandDate.TabStop = false;
             this.gbGrantRemandDate.Text = "提醒日期";
@@ -246,6 +270,7 @@
             this.tb.Controls.Add(this.tabPage2);
             this.tb.Controls.Add(this.tabPage3);
             this.tb.Controls.Add(this.tabPage1);
+            this.tb.Controls.Add(this.tabPage4);
             this.tb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb.Location = new System.Drawing.Point(0, 0);
             this.tb.Name = "tb";
@@ -260,7 +285,7 @@
             this.tpGrant.Location = new System.Drawing.Point(4, 22);
             this.tpGrant.Name = "tpGrant";
             this.tpGrant.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGrant.Size = new System.Drawing.Size(354, 334);
+            this.tpGrant.Size = new System.Drawing.Size(354, 322);
             this.tpGrant.TabIndex = 0;
             this.tpGrant.Text = "办登";
             this.tpGrant.UseVisualStyleBackColor = true;
@@ -283,7 +308,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(354, 334);
+            this.tabPage2.Size = new System.Drawing.Size(354, 322);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "年费";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -296,7 +321,7 @@
             this.gbYearFee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbYearFee.Location = new System.Drawing.Point(3, 60);
             this.gbYearFee.Name = "gbYearFee";
-            this.gbYearFee.Size = new System.Drawing.Size(348, 271);
+            this.gbYearFee.Size = new System.Drawing.Size(348, 259);
             this.gbYearFee.TabIndex = 5;
             this.gbYearFee.TabStop = false;
             this.gbYearFee.Text = "提醒日期";
@@ -427,7 +452,7 @@
             this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(354, 334);
+            this.tabPage3.Size = new System.Drawing.Size(354, 322);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "1审";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -798,12 +823,193 @@
             this.dtppublic2.TabIndex = 3;
             this.dtppublic2.ValueChanged += new System.EventHandler(this.dtppublic2_ValueChanged);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.groupBox10);
+            this.tabPage4.Controls.Add(this.btncaculate);
+            this.tabPage4.Controls.Add(this.gbAddedDate);
+            this.tabPage4.Controls.Add(this.groupBox9);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(354, 322);
+            this.tabPage4.TabIndex = 4;
+            this.tabPage4.Text = "自定义计算";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.dtpStartDate);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox9.Location = new System.Drawing.Point(3, 3);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(348, 57);
+            this.groupBox9.TabIndex = 10;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "开始日期";
+            // 
+            // dtpStartDate
+            // 
+            this.dtpStartDate.CalendarFont = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtpStartDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpStartDate.Font = new System.Drawing.Font("SimSun", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtpStartDate.Location = new System.Drawing.Point(3, 17);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(342, 38);
+            this.dtpStartDate.TabIndex = 3;
+            // 
+            // gbAddedDate
+            // 
+            this.gbAddedDate.Controls.Add(this.panel15);
+            this.gbAddedDate.Controls.Add(this.panel14);
+            this.gbAddedDate.Controls.Add(this.panel13);
+            this.gbAddedDate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbAddedDate.Location = new System.Drawing.Point(3, 60);
+            this.gbAddedDate.Name = "gbAddedDate";
+            this.gbAddedDate.Size = new System.Drawing.Size(348, 138);
+            this.gbAddedDate.TabIndex = 12;
+            this.gbAddedDate.TabStop = false;
+            this.gbAddedDate.Text = "添加日期";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox1.Font = new System.Drawing.Font("SimSun", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(256, 38);
+            this.textBox1.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.comboBox12);
+            this.panel13.Controls.Add(this.textBox1);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(3, 17);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(342, 39);
+            this.panel13.TabIndex = 2;
+            // 
+            // comboBox12
+            // 
+            this.comboBox12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox12.Font = new System.Drawing.Font("SimSun", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Items.AddRange(new object[] {
+            "年",
+            "月",
+            "天"});
+            this.comboBox12.Location = new System.Drawing.Point(256, 0);
+            this.comboBox12.Name = "comboBox12";
+            this.comboBox12.Size = new System.Drawing.Size(86, 37);
+            this.comboBox12.TabIndex = 2;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.comboBox13);
+            this.panel14.Controls.Add(this.textBox2);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(3, 56);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(342, 39);
+            this.panel14.TabIndex = 3;
+            // 
+            // comboBox13
+            // 
+            this.comboBox13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox13.Font = new System.Drawing.Font("SimSun", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Items.AddRange(new object[] {
+            "年",
+            "月",
+            "天"});
+            this.comboBox13.Location = new System.Drawing.Point(256, 0);
+            this.comboBox13.Name = "comboBox13";
+            this.comboBox13.Size = new System.Drawing.Size(86, 37);
+            this.comboBox13.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox2.Font = new System.Drawing.Font("SimSun", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(256, 38);
+            this.textBox2.TabIndex = 0;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.comboBox14);
+            this.panel15.Controls.Add(this.textBox3);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(3, 95);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(342, 39);
+            this.panel15.TabIndex = 4;
+            // 
+            // comboBox14
+            // 
+            this.comboBox14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox14.Font = new System.Drawing.Font("SimSun", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Items.AddRange(new object[] {
+            "年",
+            "月",
+            "天"});
+            this.comboBox14.Location = new System.Drawing.Point(256, 0);
+            this.comboBox14.Name = "comboBox14";
+            this.comboBox14.Size = new System.Drawing.Size(86, 37);
+            this.comboBox14.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox3.Font = new System.Drawing.Font("SimSun", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox3.Location = new System.Drawing.Point(0, 0);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(256, 38);
+            this.textBox3.TabIndex = 0;
+            // 
+            // btncaculate
+            // 
+            this.btncaculate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btncaculate.Font = new System.Drawing.Font("SimSun", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btncaculate.Location = new System.Drawing.Point(3, 198);
+            this.btncaculate.Name = "btncaculate";
+            this.btncaculate.Size = new System.Drawing.Size(348, 38);
+            this.btncaculate.TabIndex = 13;
+            this.btncaculate.Text = "计算";
+            this.btncaculate.UseVisualStyleBackColor = true;
+            this.btncaculate.Click += new System.EventHandler(this.btncaculate_Click);
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.dtpEndDate);
+            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox10.Location = new System.Drawing.Point(3, 236);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(348, 57);
+            this.groupBox10.TabIndex = 14;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "结算结果";
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.CalendarFont = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtpEndDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpEndDate.Font = new System.Drawing.Font("SimSun", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtpEndDate.Location = new System.Drawing.Point(3, 17);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(342, 38);
+            this.dtpEndDate.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 348);
             this.Controls.Add(this.tb);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(400, 400);
             this.Name = "Form1";
@@ -840,6 +1046,16 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.gbAddedDate.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -907,6 +1123,22 @@
         private System.Windows.Forms.DateTimePicker dtpsended2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dtppublic2;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
+        private System.Windows.Forms.GroupBox gbAddedDate;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.ComboBox comboBox13;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btncaculate;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
     }
 }
 

@@ -80,7 +80,7 @@ namespace DateCalculation
                 cbo.Items.AddRange(oAItems);
                 cbo.SelectedIndex = index;
             }
-
+            
             for (int index = 0; index < gbOA2.Controls.Count; index++)
             {
                 Panel p = gbOA2.Controls[index] as Panel;
@@ -88,10 +88,18 @@ namespace DateCalculation
                 cbo.Items.AddRange(oAItems);
                 cbo.SelectedIndex = index;
             }
+
+            for (int index = 0; index < gbAddedDate.Controls.Count; index++)
+            {
+                Panel p = gbAddedDate.Controls[index] as Panel;
+                ComboBox cbo = p.Controls[0] as ComboBox;
+                cbo.SelectedIndex = index;
+            }
             dtpGrantStartDate.Value = DateTime.Now;
             dtpYearFee.Value = DateTime.Now;
             dtppublic1.Value = DateTime.Now;
             dtppublic2.Value = DateTime.Now;
+            dtpStartDate.Value = DateTime.Now;
         }
 
 
@@ -142,6 +150,46 @@ namespace DateCalculation
             {
                 DateChanged(gbOA2.Controls[index] as Panel, dtpEnded2);
             }
+        }
+
+        private void btncaculate_Click(object sender, EventArgs e)
+        {
+            DateTime dt = dtpStartDate.Value;
+            for (int index = 0; index < gbAddedDate.Controls.Count; index++)
+            {
+                Panel p = gbAddedDate.Controls[index] as Panel;
+                ComboBox cbo = p.Controls[0] as ComboBox;
+                TextBox txt = p.Controls[1] as TextBox;
+                if (!String.IsNullOrEmpty(txt.Text))
+                {
+                    int changedValue = 0;
+                    try
+                    {
+                        changedValue = Convert.ToInt32(txt.Text);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("请输入正确的数字！");
+                    }
+                    
+                    switch (cbo.SelectedItem.ToString())
+                    {
+                        case "天":
+                            dt = dt.AddDays(changedValue);
+                            break;
+                        case "月":
+                            dt = dt.AddMonths(changedValue);
+                            break;
+                        case "年":
+                            dt = dt.AddYears(changedValue);
+                            break;
+
+
+                    } 
+                }
+            }
+            dtpEndDate.Value = dt;
+
         }
 
 

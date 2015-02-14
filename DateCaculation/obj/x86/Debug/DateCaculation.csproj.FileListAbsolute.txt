@@ -5,3 +5,4 @@ D:\githubProject\DateCaculattion\DateCaculation\obj\x86\Debug\DateCalculation.Pr
 D:\githubProject\DateCaculattion\DateCaculation\obj\x86\Debug\DateCaculation.csproj.GenerateResource.Cache
 D:\githubProject\DateCaculattion\DateCaculation\obj\x86\Debug\DateCalculation.exe
 D:\githubProject\DateCaculattion\DateCaculation\obj\x86\Debug\DateCalculation.pdb
+D:\githubProject\DateCaculattion\DateCaculation\obj\x86\Debug\DateCaculation.csprojResolveAssemblyReference.cache
