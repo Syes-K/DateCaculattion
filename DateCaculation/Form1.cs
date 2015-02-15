@@ -12,17 +12,23 @@ namespace DateCalculation
     {
         object[] grantRemandDateItems = new object[] {
             "-7天",
-            "-14天",
+            "-15天",
             "-1月"};
         object[] yearFeeItems = new object[] {
             "-7天",
-            "-14天",
+            "-1月",
             "-3月"};
 
         object[] oAItems = new object[] {
             "-7天",
-            "-14天",
-            "-1月"};
+            "-15天"
+            };
+        object[] oADebugItems = new object[] {
+            "-7天",
+            "-15天",
+            "-1月"
+            };
+
         private void DateChanged(Panel p, DateTimePicker startDtp)
         {
             ComboBox cbo = p.Controls[1] as ComboBox;
@@ -80,6 +86,7 @@ namespace DateCalculation
                 cbo.Items.AddRange(oAItems);
                 cbo.SelectedIndex = index;
             }
+      
             
             for (int index = 0; index < gbOA2.Controls.Count; index++)
             {
@@ -88,7 +95,13 @@ namespace DateCalculation
                 cbo.Items.AddRange(oAItems);
                 cbo.SelectedIndex = index;
             }
-
+            for (int index = 0; index < gbOADebug.Controls.Count; index++)
+            {
+                Panel p = gbOADebug.Controls[index] as Panel;
+                ComboBox cbo = p.Controls[1] as ComboBox;
+                cbo.Items.AddRange(oADebugItems);
+                cbo.SelectedIndex = index;
+            }
             for (int index = 0; index < gbAddedDate.Controls.Count; index++)
             {
                 Panel p = gbAddedDate.Controls[index] as Panel;
@@ -99,6 +112,7 @@ namespace DateCalculation
             dtpYearFee.Value = DateTime.Now;
             dtppublic1.Value = DateTime.Now;
             dtppublic2.Value = DateTime.Now;
+            dtpOADebug.Value = DateTime.Now;
             dtpStartDate.Value = DateTime.Now;
         }
 
@@ -135,7 +149,7 @@ namespace DateCalculation
             {
                 DateChanged(gbOA1.Controls[index] as Panel, dtpEnded1);
             }
-
+            
         }
 
         private void dtppublic2_ValueChanged(object sender, EventArgs e)
@@ -143,7 +157,13 @@ namespace DateCalculation
             dtpsended2.Value = dtppublic2.Value.AddDays(15);
             dtpEnded2.Value = dtppublic2.Value.AddDays(15).AddMonths(2);
         }
-
+        private void dtpOADebug_ValueChanged(object sender, EventArgs e)
+        {
+            for (int index = 0; index < gbOADebug.Controls.Count; index++)
+            {
+                DateChanged(gbOADebug.Controls[index] as Panel, dtpOADebug);
+            }
+        }
         private void dtpEnded2_ValueChanged(object sender, EventArgs e)
         {
             for (int index = 0; index < gbOA2.Controls.Count; index++)
@@ -191,6 +211,8 @@ namespace DateCalculation
             dtpEndDate.Value = dt;
 
         }
+
+     
 
 
 
